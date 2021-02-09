@@ -1,0 +1,18 @@
+<form method="POST" action="/signup">
+    <label class="form-label">Username</label>
+    <input name="username" type="text" class="form-control">
+    <br>
+    <label class="form-label">Password</label>
+    <input name="password" type="password" class="form-control" aria-describedby="passwordHelpBlock">
+    <div id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>
+
+{{#if msg}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> {{msg}}
+</div>
+{{/if}}
